@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://dodge_assets/fonts/xolonium-regular.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/HUD.gd" type="Script" id=2]
+
+[sub_resource type="InputEventAction" id=1]
+action = "ui_select"
+
+[sub_resource type="ShortCut" id=2]
+shortcut = SubResource( 1 )
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="ScoreLabel" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Message" type="Label" parent="."]
+margin_left = 10.4881
+margin_top = 188.481
+margin_right = 486.488
+margin_bottom = 300.481
+rect_scale = Vector2( 0.956862, 1.07886 )
+custom_fonts/font = ExtResource( 1 )
+text = "Sample Game"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="."]
+margin_left = 170.807
+margin_top = 306.475
+margin_right = 303.807
+margin_bottom = 406.475
+custom_fonts/font = ExtResource( 1 )
+shortcut = SubResource( 2 )
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MessageTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="timeout" from="MessageTimer" to="." method="_on_MessageTimer_timeout"]
