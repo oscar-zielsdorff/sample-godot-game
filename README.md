@@ -1,7 +1,8 @@
 # Sample 2D Godot Game
 
 ## To Run
+1. Download `sample-game.pck`
 ### Windows:
-`build/sample-game.exe`
+2. Download and execute `build/sample-game.exe`
 ### Linux:
-`build/sample-game.x86_64`
+2. Download and execute `build/sample-game.x86_64`
