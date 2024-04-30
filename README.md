@@ -2,7 +2,6 @@
 
 ## To Run
 1. Download `build/sample-game.pck`
-### Windows:
-2. Download and execute `build/sample-game.exe`
-### Linux:
-2. Download and execute `build/sample-game.x86_64`
+
+2. <ins>**For Windows:**</ins> Download and execute `build/sample-game.exe`</br>
+   <ins>**For Linux:**</ins> Download and execute `build/sample-game.x86_64`
